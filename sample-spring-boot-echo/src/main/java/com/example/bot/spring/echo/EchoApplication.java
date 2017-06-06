@@ -43,10 +43,11 @@ public class EchoApplication {
     public void handleDefaultMessageEvent(Event event) {
         System.out.println("event: " + event);
     }
-}
- 
-    @EventMapping
+    
+  　 @EventMapping
     public Message handleBeaconMessageEvent(BeaconEvent event) {
     System.out.println(event.getBeacon().getHwid()); //HWIDを標準出力
     return new TextMessage("LINE Beanconから通知だよ！砂金さん、ありがとうございました！");
     }
+
+}
