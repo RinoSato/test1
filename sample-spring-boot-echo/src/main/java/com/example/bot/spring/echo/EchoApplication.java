@@ -24,7 +24,15 @@ import com.linecorp.bot.model.event.MessageEvent;
 import com.linecorp.bot.model.event.message.TextMessageContent;
 import com.linecorp.bot.model.message.TextMessage;
 import com.linecorp.bot.spring.boot.annotation.EventMapping;
-import com.linecorp.bot.spring.boot.annotation.LineMessageHandler;
+import com.linecorp.bot.spring.boot.annotation.LineMessageHandler;  
+import com.linecorp.bot.model.event.BeaconEvent;
+import com.linecorp.bot.model.event.beacon.BeaconContent;
+import com.linecorp.bot.model.event.message.ImageMessageContent;
+import com.linecorp.bot.model.event.message.StickerMessageContent;
+import com.linecorp.bot.model.event.message.TextMessageContent;
+import com.nic.linebot.meetbeacon.app.MeetBeaconApplication; 
+ 
+
 
 @SpringBootApplication
 @LineMessageHandler
