@@ -19,20 +19,6 @@ package com.example.bot.spring.echo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.linecorp.bot.client.LineMessagingService;
-import com.linecorp.bot.model.ReplyMessage;
-import com.linecorp.bot.model.event.BeaconEvent;
-import com.linecorp.bot.model.event.Event;
-import com.linecorp.bot.model.event.MessageEvent;
-import com.linecorp.bot.model.event.beacon.BeaconContent;
-import com.linecorp.bot.model.event.message.MessageContent;
-import com.linecorp.bot.model.event.message.TextMessageContent;
-import com.linecorp.bot.model.message.TextMessage;
-import com.linecorp.bot.model.response.BotApiResponse;
-import com.linecorp.bot.spring.boot.annotation.LineBotMessages;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.web.bind.annotation.*;
 import com.linecorp.bot.model.event.Event;
 import com.linecorp.bot.model.event.MessageEvent;
 import com.linecorp.bot.model.event.message.TextMessageContent;
@@ -56,12 +42,6 @@ public class EchoApplication {
     @EventMapping
     public void handleDefaultMessageEvent(Event event) {
         System.out.println("event: " + event);
-    }
-    
-    @EventMapping
-    public Message handleBeaconMessageEvent(BeaconEvent event) {
-    System.out.println(event.getBeacon().getHwid()); //HWIDを標準出力
-    return new TextMessage("LINE Beanconから通知だよ！砂金さん、ありがとうございました！");
     }
     
 }
