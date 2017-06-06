@@ -30,7 +30,7 @@ import com.linecorp.bot.model.event.beacon.BeaconContent;
 import com.linecorp.bot.model.event.message.ImageMessageContent;
 import com.linecorp.bot.model.event.message.StickerMessageContent;
 import com.linecorp.bot.model.event.message.TextMessageContent;
-import com.linecorp.bot.model.event.Message; 
+import com.linecorp.bot.model.message.Message; 
  
 
 
