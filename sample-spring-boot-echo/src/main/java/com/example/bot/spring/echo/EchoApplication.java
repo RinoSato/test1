@@ -63,7 +63,7 @@ public class EchoApplication {
    @EventMapping
     public Message handleBeaconMessageEvent(BeaconEvent event) {
     System.out.println(event.getBeacon().getHwid()); //HWIDを標準出力
-    return new TextMessage("LINE Beanconから通知だよ！砂金さん、ありがとうございました！");
+    return new TextMessage("LINE Beancon");
     } 
     
 }
